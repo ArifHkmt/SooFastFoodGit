@@ -92,9 +92,9 @@ public class GameManager : MonoBehaviour
 
         int result = 0;
 
-
-        int res = FoodBaseManager.instance.totalFood;
-        int score = (int)(FoodBaseManager.instance.totalTrueFood*0.5f);
+        
+        int score = FoodBaseManager.instance.totalTrueFood;
+        int res = (int)(FoodBaseManager.instance.totalFood * 0.5f);
 
         if (score>=res)
         {

@@ -870,7 +870,7 @@ MonoBehaviour:
   - {fileID: 1767998358081780081}
   - {fileID: 1767998358435897674}
   - {fileID: 1767998359016756894}
-  - {fileID: 1767998359016756894}
+  - {fileID: 3766022316283775314}
   currentFood: {fileID: 0}
   _foodParent: {fileID: 1767998357925730518}
   Scales:
@@ -1423,6 +1423,11 @@ PrefabInstance:
     - target: {fileID: -3887185075125053422, guid: e615360efa9b50440aaa0d4b1be1a4bf,
         type: 3}
       propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3887185075125053422, guid: e615360efa9b50440aaa0d4b1be1a4bf,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3887185075125053422, guid: e615360efa9b50440aaa0d4b1be1a4bf,

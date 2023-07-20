@@ -919,6 +919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodTab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
 --- !u!4 &145897543 stripped
@@ -1351,6 +1356,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodTab (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
 --- !u!1001 &182621720
@@ -1776,6 +1786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoodTab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
@@ -7362,6 +7377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodTab (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
 --- !u!1 &1088442347
@@ -7763,6 +7783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodTab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
 --- !u!1 &1114729464
@@ -7935,6 +7960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoodTab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
@@ -9419,6 +9449,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodTab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
 --- !u!1 &1367340823
@@ -10672,6 +10707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoodTab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}
@@ -16768,6 +16808,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 77100001}
     m_Modifications:
+    - target: {fileID: 11706656086486824, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 192014835496991165, guid: bb6390e0b4fad3f499b405da266e9c70,
         type: 3}
       propertyPath: m_RootOrder
@@ -16827,6 +16872,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FoodTab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646113816368115874, guid: bb6390e0b4fad3f499b405da266e9c70,
+        type: 3}
+      propertyPath: foodType
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6390e0b4fad3f499b405da266e9c70, type: 3}

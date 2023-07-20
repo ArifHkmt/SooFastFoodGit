@@ -20,7 +20,7 @@ public class FoodTabController : MonoBehaviour
 
     public Transform refRight;
     public Transform refLeft;
-    private int foodType;
+    [SerializeField] int foodType;
     // Start is called before the first frame update
     void Start()
     {
@@ -129,7 +129,7 @@ public class FoodTabController : MonoBehaviour
 
     public void SetTab(int index)
     {
-        foodType = index;
+        //foodType = index;
         Foods[foodType].SetActive(true);
         _foodSource.SetFoodSource(foodType);
     }
