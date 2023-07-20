@@ -412,6 +412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ec12cb340d00241abbd8ac007d749c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scrollSign: {fileID: 0}
+  _dragSign: {fileID: 0}
+  _dragSign2: {fileID: 0}
+  _infSign: {fileID: 0}
+  _tapSign: {fileID: 0}
+  _tapSign2: {fileID: 0}
   _mustard1Ref1: {fileID: 3834224488437498201}
   _mustard1Ref2: {fileID: 8095648692813307731}
   _mustard2Ref1: {fileID: 7003600307451865770}
@@ -447,6 +453,7 @@ MonoBehaviour:
   _pizzaStep: 0
   _waffleStep: 0
   totalTrueFood: 0
+  totalFood: 0
   currentQuestCounts: 00000000000000000000000000000000
   Bases:
   - {fileID: 1823105813888839696}

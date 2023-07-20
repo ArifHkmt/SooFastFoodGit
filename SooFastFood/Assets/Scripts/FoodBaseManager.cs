@@ -227,6 +227,15 @@ public class FoodBaseManager : MonoBehaviour
    
         currentBase.transform.DOMove(_customerRef.position, 1f);
         yield return new WaitForSeconds(1f);
+        for (int i = 0; i < Bases.Length; i++)
+        {
+            Bases[i].ResetBase();
+            Bases[i].transform.parent = transform;
+            Bases[i].transform.localPosition = Vector3.zero;
+            Bases[i].transform.localEulerAngles = Vector3.zero;
+            Bases[i].gameObject.SetActive(false);
+
+        }
         currentBase.transform.parent = _customerRef;
         currentBase.transform.localEulerAngles = Vector3.zero;
         QuestManager.instance.Mission(1);

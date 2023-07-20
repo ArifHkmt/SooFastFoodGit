@@ -5,6 +5,9 @@ using DG.Tweening;
 
 public class FoodController : MonoBehaviour
 {
+
+    private AudioSource source;
+
     [SerializeField] GameObject[] Foods;
     [SerializeField] FoodBlendController currentFood;
 
@@ -42,6 +45,8 @@ public class FoodController : MonoBehaviour
 
     public void SetFood(int index)
     {
+
+        source = GetComponent<AudioSource>();
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<BoxCollider>();
         foodType = index;
@@ -109,6 +114,11 @@ public class FoodController : MonoBehaviour
        
         }
         FoodBaseManager.instance.totalFood++;
+
+        GameManager.instance.Vibrate();
+
+        source.Play();
+
         StartCoroutine(Locating(pos, _base));
 
     }
@@ -116,7 +126,7 @@ public class FoodController : MonoBehaviour
     public void LocateBack(Vector3 pos)
     {
 
-
+        GameManager.instance.VibrateHigh();
         StartCoroutine(LocatingBack(pos));
 
 

@@ -4,9 +4,17 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
+using Taptic;
 
 public class GameManager : MonoBehaviour
 {
+
+
+    public bool vibration;
+    public bool vib;
+
+    [SerializeField] GameObject[] CustomerFoods;
+    [SerializeField] GameObject[] Faces;
 
     [SerializeField] Animator _animator;
     [SerializeField] Vector3 _camRotFirst;
@@ -101,9 +109,14 @@ public class GameManager : MonoBehaviour
         Customer(count,result);
     }
 
+
+    #region Customer Setting
+
     public void Customer(float count, int result)
     {
 
+        CustomerFoods[QuestManager.instance.currentQuest.foodBaseIndex].SetActive(true);
+    
 
 
         StartCoroutine(CustomerReact(count, result));
@@ -119,27 +132,141 @@ public class GameManager : MonoBehaviour
         Camera.main.transform.DORotate(_camRotCustomer, 0.4f);
         yield return new WaitForSeconds(0.4f);
         _animator.SetTrigger("Eat");
+        SetFaces(1);
         yield return new WaitForSeconds(2f);
+
+        for (int i = 0; i < CustomerFoods.Length; i++)
+        {
+            CustomerFoods[i].SetActive(false);
+        }
+
         if (result==1)
         {
+            SetFaces(2);
             _animator.SetTrigger("Happy");
         }
         else
         {
+            SetFaces(3);
             _animator.SetTrigger("Vomit");
         }
         MoneyUp(count);
         yield return new WaitForSeconds(4f);
+        SetFaces(0);
+     
         Camera.main.transform.DORotate(_camRotFirst, 0.4f);
         yield return new WaitForSeconds(0.4f);
         _nextTab.SetActive(true);
     }
 
+    private void SetFaces(int index)
+    {
+        for (int i = 0; i < Faces.Length; i++)
+        {
+            Faces[i].SetActive(false);
+        }
 
+        Faces[index].SetActive(true);
+
+    }
 
     public void CloseTab(GameObject tab)
     {
         tab.SetActive(false);
     }
+
+
+    #endregion
+
+
+    #region Vibrate Setting
+
+    public void Vibrate()
+    {
+
+        if (vibration)
+        {
+
+
+
+            if (!vib)
+            {
+                Debug.Log("vib");
+
+
+                vib = true;
+                Vibration.Vibrate(30, 70, true);
+                StartCoroutine(VibDelay());
+            }
+
+
+        }
+
+    }
+
+    IEnumerator VibDelay()
+    {
+        yield return new WaitForSecondsRealtime(0.05f);
+        vib = false;
+    }
+
+
+    public void VibrateMed()
+    {
+        if (vibration)
+        {
+
+            if (!vib)
+            {
+                Debug.Log("vib");
+
+
+                vib = true;
+                Vibration.Vibrate(70, 170, true);
+                StartCoroutine(VibDelayMed());
+            }
+
+        }
+
+
+    }
+
+    IEnumerator VibDelayMed()
+    {
+        yield return new WaitForSecondsRealtime(0.05f);
+        vib = false;
+    }
+
+
+
+    public void VibrateHigh()
+    {
+        if (vibration)
+        {
+
+            if (!vib)
+            {
+                Debug.Log("vib");
+
+
+                vib = true;
+                Vibration.Vibrate(70, 255, true);
+                StartCoroutine(VibDelayHigh());
+            }
+
+
+
+        }
+    }
+
+    IEnumerator VibDelayHigh()
+    {
+        yield return new WaitForSecondsRealtime(0.05f);
+        vib = false;
+    }
+
+    #endregion
+
+
 
 }
